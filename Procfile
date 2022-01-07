@@ -1,1 +1,1 @@
-web: gunicorn spacex_dash_app:server
+web: gunicorn spacex_dash_app:server --timeout 120
