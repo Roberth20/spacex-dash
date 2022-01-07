@@ -14,6 +14,7 @@ min_payload = spacex_df['Payload Mass (kg)'].min()
 
 # Create a dash application
 app = dash.Dash(__name__)
+server = app.server
 
 # Create an app layout
 app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
@@ -182,5 +183,6 @@ def model_perform(input_value):
                tree_cv.best_score_, knn_cv.best_score_])
 
 # Run the app
+
 if __name__ == '__main__':
     app.run_server(host="0.0.0.0", debug=False)
